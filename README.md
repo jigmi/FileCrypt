@@ -11,17 +11,18 @@ FileCrypt is a program that encrypts the selected file with AES 256 bit encrypti
 
 ![Screenshot 2022-01-23 221228](https://user-images.githubusercontent.com/87882680/150675690-5e192e75-dac5-4f8d-8573-31733645d3df.png)
 
-# Key Modules
+__Key Modules__
+
 Tkinter for GUI
 
 pycryptodomex for AES encryption 
 
-# Dependancies
+__Dependancies__
 - Pycryptodomex
 ```python
 pip install pycryptodomex
 ```
-# How to encrypt and decrypt
+__How to encrypt and decrypt__
 1. Run the application and select any file that you want to be encrypted.
 2. Enter your password to be used for encryption and subsequent decryption, the password can be of any length, letter and symbol. 
 3. Click Encryption, the file that you selected will have its encrypted version created in the same directory, with .enc to signify its encryped status, the original file will have been deleted automatically. 
