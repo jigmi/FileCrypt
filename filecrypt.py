@@ -7,6 +7,7 @@ from Cryptodome.Protocol.KDF import PBKDF2
 from Cryptodome.Cipher import AES 
 from Cryptodome.Util.Padding import pad,unpad
 import os
+
 def gui_setup():
     global gui
     global v 
@@ -24,10 +25,12 @@ def gui_setup():
     encryptbutton = Button(gui,text = "Encrypt", bg = "#27ae60", fg = "#ffffff",command = encryption,font = (None,10),height = 3, width = 12).place(x=55,y=250)
     decryptbutton = Button(gui,text = "Decrypt",bg = "red", fg = "#ffffff", command = decryption, font = (None,10), height = 3, width = 12).place(x=235, y= 250)
     gui.mainloop()  
+
 def fileopen():
     global root_filename
     root_filename = filedialog.askopenfilename()
     v.set(root_filename) 
+
 def encryption():
     global password
     global global_status
@@ -62,6 +65,7 @@ def encryption():
     o.close()
     global_status.set("Encrypted")
     os.unlink(file_path)
+
 def decryption():
     password = l.get()
     filepath = root_filename
@@ -96,4 +100,5 @@ def decryption():
         decrypted_file.close()
         global_status.set("Decrypted")
         os.unlink(filepath)
+        
 gui_setup()
